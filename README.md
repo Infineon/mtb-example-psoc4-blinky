@@ -5,7 +5,7 @@ This code example blinks an LED using PSoC&trade; 4.
 [View this README on GitHub.](https://github.com/Infineon/mtb-example-psoc4-blinky)
 
 
-[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzU0NzUiLCJTcGVjIE51bWJlciI6IjAwMi0zNTQ3NSIsIkRvYyBUaXRsZSI6IlBTb0MmdHJhZGU7IDQ6IEJsaW5reSIsInJpZCI6InNoYXJ3YXJpIiwiRG9jIHZlcnNpb24iOiIxLjAuMCIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
+[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzU0NzUiLCJTcGVjIE51bWJlciI6IjAwMi0zNTQ3NSIsIkRvYyBUaXRsZSI6IlBTb0MmdHJhZGU7IDQ6IEJsaW5reSIsInJpZCI6InNoYXJ3YXJpIiwiRG9jIHZlcnNpb24iOiIxLjAuMSIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
 
 ## Requirements
 
@@ -132,7 +132,7 @@ For a list of supported IDEs and more details, see the "Exporting to IDEs" secti
 
    Default location: */ModusToolbox/tools_3.0/fw-loader/bin*
 
-   Select the SWD mode by running the `Select_SWD` batch file to program the CY8CKIT-040T kit. SWD mode is the default mode set upon reset, hence running the batch file can be skipped if the kit is connected for the first time. For detailed information, see **Step 3** of **Section 2.3** in [CY8CKIT-040T kit user guide](www.infineon.com/002-34472).
+   Select the SWD mode by running the `Select_SWD` batch file to program the CY8CKIT-040T kit. SWD mode is the default mode set upon reset, hence running the batch file can be skipped if the kit is connected for the first time. For detailed information, see **Section 2.3.1** in [CY8CKIT-040T kit user guide](www.infineon.com/002-34472).
 
 3. Program the board using one of the following:
 
@@ -166,7 +166,7 @@ For a list of supported IDEs and more details, see the "Exporting to IDEs" secti
 
 You can debug the example to step through the code. In the IDE, use the **\<Application Name> Debug (KitProg3_MiniProg4)** configuration in the **Quick Panel**. For more details, see the "Program and debug" section in the [Eclipse IDE for ModusToolbox&trade; user guide](https://www.cypress.com/MTBEclipseIDEUserGuide).
 
-**Note:** The debug port is disabled by default for CY8CKIT-040T, because it uses the pins P3[3] (SWDIO) and P3[2] (SWDCK) for User LED. If debug is required, enable the **Debug** setting under the **Systems** tab in the Device Configurator and change the **Debug Mode** setting to **SWD**. Because User LED mode is multiplexed on the same pins, the user LED won't blink when debug is enabled.
+**Note:** The debug port is disabled by default for CY8CKIT-040T, because it uses the pins P3[2] (SWDIO) and P3[3] (SWDCK) for User LED. If debug is required, enable the **Debug** setting under the **Systems** tab in the Device Configurator and change the **Debug Mode** setting to **SWD**. Because User LED mode is multiplexed on the same pins, the user LED won't blink when debug is enabled.
 
 ## Design and implementation
 
@@ -207,6 +207,7 @@ Document title: *CE235475* – *PSoC&trade; 4: Blinky*
  Version | Description of change
  ------- | ---------------------
  1.0.0   | New code example
+ 1.0.1   | Minor readme update
 
 <br />
 
