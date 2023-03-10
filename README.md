@@ -1,31 +1,31 @@
 # PSoC&trade; 4: Blinky
 
-This code example blinks an LED using PSoC&trade; 4.
+This code example demonstrates how to toggle an LED periodically using PSoC™ 4.
 
 [View this README on GitHub.](https://github.com/Infineon/mtb-example-psoc4-blinky)
 
 
-[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzU0NzUiLCJTcGVjIE51bWJlciI6IjAwMi0zNTQ3NSIsIkRvYyBUaXRsZSI6IlBTb0MmdHJhZGU7IDQ6IEJsaW5reSIsInJpZCI6InNoYXJ3YXJpIiwiRG9jIHZlcnNpb24iOiIxLjAuMSIsIkRvYyBMYW5ndWFnZSI6IkVuZ2xpc2giLCJEb2MgRGl2aXNpb24iOiJNQ0QiLCJEb2MgQlUiOiJJQ1ciLCJEb2MgRmFtaWx5IjoiUFNPQyJ9)
+[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzU0NzUiLCJTcGVjIE51bWJlciI6IjAwMi0zNTQ3NSIsIkRvYyBUaXRsZSI6IlBTb0MmdHJhZGU7IDQ6IEJsaW5reSIsInJpZCI6Inlhc2h2aSIsIkRvYyB2ZXJzaW9uIjoiMS4xLjAiLCJEb2MgTGFuZ3VhZ2UiOiJFbmdsaXNoIiwiRG9jIERpdmlzaW9uIjoiTUNEIiwiRG9jIEJVIjoiSUNXIiwiRG9jIEZhbWlseSI6IlBTT0MifQ==)
 
 ## Requirements
 
-- [ModusToolbox&trade; software](https://www.cypress.com/products/modustoolbox-software-environment) v3.0 or later
+- [ModusToolbox&trade; software](https://www.infineon.com/cms/en/design-support/tools/sdk/modustoolbox-software/) v3.0 or later
 
   **Note:** This code example version requires ModusToolbox&trade; software version 3.0 or later and is not backward compatible with v2.4 or older versions.
 
-- Board support package (BSP) minimum required version: 0.5.0
+- Board support package (BSP) minimum required version: 0.6.0.
 - Programming language: C
-- Associated parts: [PSoC&trade; 4000T](www.infineon.com/002-33949)
+- Associated parts: PSoC&trade; 4000T
 
 ## Supported toolchains (make variable 'TOOLCHAIN')
 
 - GNU Arm&reg; embedded compiler v10.3.1 (`GCC_ARM`) - Default value of `TOOLCHAIN`
-- Arm&reg; compiler v6.13 (`ARM`)
-- IAR C/C++ compiler v8.42.2 (`IAR`)
+- Arm&reg; compiler v6.16 (`ARM`)
+- IAR C/C++ compiler v9.30.1 (`IAR`)
 
 ## Supported kits (make variable 'TARGET')
 
-- [PSoC&trade; 4000T CAPSENSE&trade; evaluation kit](https://www.infineon.com/CY8CKIT-040T) (`CY8CKIT-040T`) - Default value of `TARGET`
+- PSoC&trade; 4000T CAPSENSE&trade; evaluation kit (`CY8CKIT-040T`) - Default value of `TARGET`
 
 ## Hardware setup
 
@@ -42,11 +42,11 @@ Create the project and open it using one of the following:
 
 <details><summary><b>In Eclipse IDE for ModusToolbox&trade; software</b></summary>
 
-1. Click the **New Application** link in the **Quick Panel** (or, use **File** > **New** > **ModusToolbox Application**). This launches the [Project Creator](https://www.cypress.com/ModusToolboxProjectCreator) tool.
+1. Click the **New Application** link in the **Quick Panel** (or, use **File** > **New** > **ModusToolbox&trade; Application**). This launches the [Project Creator](https://www.infineon.com/dgdl/Infineon-ModusToolbox_Project_Creator_2.0_User_Guide-UserManual-v01_00-EN.pdf?fileId=8ac78c8c8386267f0183a973003f59b3) tool.
 
 2. Pick a kit supported by the code example from the list shown in the **Project Creator - Choose Board Support Package (BSP)** dialog.
 
-   When you select a supported kit, the example is reconfigured automatically to work with the kit. To work with a different supported kit later, use the [Library Manager](https://www.cypress.com/ModusToolboxLibraryManager) to choose the BSP for the supported kit. You can use the Library Manager to select or update the BSP and firmware libraries used in this application. To access the Library Manager, click the link from the **Quick Panel**.
+   When you select a supported kit, the example is reconfigured automatically to work with the kit. To work with a different supported kit later, use the [Library Manager](https://www.infineon.com/dgdl/Infineon-ModusToolbox_Library_Manager_2.0_User_Guide-UserManual-v01_00-EN.pdf?fileId=8ac78c8c8386267f0183a960c5945992) to choose the BSP for the supported kit. You can use the Library Manager to select or update the BSP and firmware libraries used in this application. To access the Library Manager, click the link from the **Quick Panel**.
 
    You can also just start the application creation process again and select a different kit.
 
@@ -60,7 +60,7 @@ Create the project and open it using one of the following:
 
 6. Click **Create** to complete the application creation process.
 
-For more details, see the [Eclipse IDE for ModusToolbox&trade; software user guide](https://www.cypress.com/MTBEclipseIDEUserGuide) (locally available at *{ModusToolbox&trade; software install directory}/ide_{version}/docs/mt_ide_user_guide.pdf*).
+For more details, see the [Eclipse IDE for ModusToolbox&trade; software user guide](https://www.infineon.com/MTBEclipseIDEUserGuide) (locally available at *{ModusToolbox&trade; software install directory}/docs_{version}/mt_ide_user_guide.pdf*).
 
 </details>
 
@@ -70,7 +70,7 @@ ModusToolbox&trade; software provides the Project Creator as both a GUI tool and
 
 Use a CLI terminal to invoke the "project-creator-cli" tool. On Windows, use the command line "modus-shell" program provided in the ModusToolbox&trade; software installation instead of a standard Windows command-line application. This shell provides access to all ModusToolbox&trade; software tools. You can access it by typing `modus-shell` in the search box in the Windows menu. In Linux and macOS, you can use any terminal application.
 
-This tool has the following arguments:
+The "project-creator-cli" tool has the following arguments:
 
 Argument | Description | Required/optional
 ---------|-------------|-----------
@@ -81,13 +81,13 @@ Argument | Description | Required/optional
 
 <br>
 
-The following example will clone the "[Blinky](https://github.com/Infineon/mtb-example-psoc4-blinky)" application with the desired name "MyBlinky" configured for the *CY8CKIT-040T* BSP into the specified working directory, *C:/mtb_projects*:
+The following example clones the "[Blinky](https://github.com/Infineon/mtb-example-psoc4-blinky)" application with the desired name "MyBlinky" configured for the *CY8CKIT-040T* BSP into the specified working directory, *C:/mtb_projects*:
 
    ```
    project-creator-cli --board-id CY8CKIT-040T --app-id mtb-example-psoc4-blinky --user-app-name MyBlinky --target-dir "C:/mtb_projects"
    ```
 
-**Note:** The project-creator-cli tool uses the `git clone` and `make getlibs` commands to fetch the repository and import the required libraries. For details, see the "Project creator tools" section of the [ModusToolbox&trade; software user guide](https://www.cypress.com/ModusToolboxUserGuide) (locally available at *{ModusToolbox&trade; software install directory}/docs_{version}/mtb_user_guide.pdf*).
+**Note:** The project-creator-cli tool uses the `git clone` and `make getlibs` commands to fetch the repository and import the required libraries. For details, see the "Project creator tools" section of the [ModusToolbox&trade; software user guide](https://www.infineon.com/ModusToolboxUserGuide) (locally available at *{ModusToolbox&trade; software install directory}/docs_{version}/mtb_user_guide.pdf*).
 
 </details>
 
@@ -95,7 +95,7 @@ The following example will clone the "[Blinky](https://github.com/Infineon/mtb-e
 
 Use one of the following options:
 
-- **Use the standalone [Project Creator](https://www.cypress.com/ModusToolboxProjectCreator) tool:**
+- **Use the standalone [Project Creator](https://www.infineon.com/ModusToolboxProjectCreator) tool:**
 
    1. Launch Project Creator from the Windows Start menu or from *{ModusToolbox&trade; software install directory}/tools_{version}/project-creator/project-creator.exe*.
 
@@ -115,7 +115,7 @@ Use one of the following options:
 
    3. Follow the instructions displayed in the terminal to create or import the application as an IDE project.
 
-For a list of supported IDEs and more details, see the "Exporting to IDEs" section of the [ModusToolbox&trade; software user guide](https://www.cypress.com/ModusToolboxUserGuide) (locally available at *{ModusToolbox&trade; software install directory}/docs_{version}/mtb_user_guide.pdf*).
+For a list of supported IDEs and more details, see the "Exporting to IDEs" section of the [ModusToolbox&trade; software user guide](https://www.infineon.com/ModusToolboxUserGuide) (locally available at *{ModusToolbox&trade; software install directory}/docs_{version}/mtb_user_guide.pdf*).
 
 </details>
 
@@ -124,15 +124,15 @@ For a list of supported IDEs and more details, see the "Exporting to IDEs" secti
 
 1. Connect the board to your PC using the provided USB cable through the KitProg3 USB connector.
 
-   **Figure 1. Connecting the CY8CKIT-040T kit to a computer**
+   **Figure 1. Connecting the CY8CKIT-040T kit**
 
    <img src="images/kit_connection.png" alt="" width="400" />
 
-2. The SWD, I2C and User LED modes are multiplexed to the same pins (GPIO Pins P3[2] and P3[3]) in CY8CKIT-040T. The interface can be switched between these using FW-loader commands. Download and unzip the *Batch_files_for_mux_selection* zipped file from the Beta package to the bin folder inside the *fw-loader* folder in the ModusToolbox&trade; installation directory.
+2. The SWD, I2C, and User LED modes are multiplexed to the same pins (GPIO Pins P3[2] and P3[3]) in CY8CKIT-040T. The interface between these can be switched using FW-loader commands. Download and unzip the *Batch_files_for_mux_selection* zipped file from the beta package to the bin folder inside the *fw-loader* folder in the ModusToolbox&trade; installation directory.
 
    Default location: */ModusToolbox/tools_3.0/fw-loader/bin*
 
-   Select the SWD mode by running the `Select_SWD` batch file to program the CY8CKIT-040T kit. SWD mode is the default mode set upon reset, hence running the batch file can be skipped if the kit is connected for the first time. For detailed information, see **Section 2.3.1** in [CY8CKIT-040T kit user guide](www.infineon.com/002-34472).
+   Select the SWD mode by running the *Select_SWD* batch file to program the CY8CKIT-040T kit. SWD mode is the default mode set upon reset; therefore, running the batch file can be skipped if the kit is connected for the first time. For detailed information, see **Section 2.3.1** in CY8CKIT-040T kit user guide.
 
 3. Program the board using one of the following:
 
@@ -146,7 +146,7 @@ For a list of supported IDEs and more details, see the "Exporting to IDEs" secti
 
    <details><summary><b>Using CLI</b></summary>
 
-     From the terminal, execute the `make program` command to build and program the application using the default toolchain to the default target. The default toolchain and target are specified in the application's Makefile but you can override those values manually:
+     From the terminal, execute the `make program` command to build and program the application using the default toolchain to the default target. The default toolchain and target are specified in the application's Makefile but you can override this value manually:
       ```
       make program TARGET=<BSP> TOOLCHAIN=<toolchain>
       ```
@@ -158,15 +158,27 @@ For a list of supported IDEs and more details, see the "Exporting to IDEs" secti
    </details>
 
 
-4. After programming, the application starts automatically. Select the User LED mode by running the `Select_User_LED` batch file to set the LED connection with the MCU.
+4. After programming, the application starts automatically. Select the User LED mode by running the *Select_User_LED* batch file to set the LED connection with the MCU.
 
 5. Confirm that the kit LED blinks at approximately 1 Hz.
 
+
+
+## Create custom BSP for your board 
+
+1. Create a custom BSP for your board having any device, by following the steps given in [ModusToolbox™ BSP Assistant user guide](https://www.infineon.com/dgdl/Infineon-ModusToolbox_BSP_Assistant_1.0_User_Guide-UserManual-v02_00-EN.pdf?fileId=8ac78c8c8386267f0183a972f45c59af). This code example was created for the device "CY8C4046LQI-T452".
+
+
+
 ## Debugging
 
-You can debug the example to step through the code. In the IDE, use the **\<Application Name> Debug (KitProg3_MiniProg4)** configuration in the **Quick Panel**. For more details, see the "Program and debug" section in the [Eclipse IDE for ModusToolbox&trade; user guide](https://www.cypress.com/MTBEclipseIDEUserGuide).
+You can debug the example to step through the code. In the IDE, use the **\<Application Name> Debug (KitProg3_MiniProg4)** configuration in the **Quick Panel**. For details, see the "Program and debug" section in the [Eclipse IDE for ModusToolbox&trade; software user guide](https://www.infineon.com/MTBEclipseIDEUserGuide).
 
-**Note:** The debug port is disabled by default for CY8CKIT-040T, because it uses the pins P3[2] (SWDIO) and P3[3] (SWDCK) for User LED. If debug is required, enable the **Debug** setting under the **Systems** tab in the Device Configurator and change the **Debug Mode** setting to **SWD**. Because User LED mode is multiplexed on the same pins, the user LED won't blink when debug is enabled.
+**Note:** The debug port is disabled by default for CY8CKIT-040T because it uses the pins P3[2] (SWDIO) and P3[3] (SWDCK) for the User LED. If debugging is required, do the following: 
+   1. Enable the **Debug Mode** under the **Systems** tab in the **Device Configurator** and change the **Debug Mode** setting to **SWD**.
+   2. Select the pins P3[2] (SWDIO) and P3[3] (SWDCK) under the **SWD pin** setting.
+
+Because the User LED mode is multiplexed on the same pins, the User LED will not blink when debugging is enabled.
 
 ## Design and implementation
 
@@ -176,7 +188,7 @@ You can debug the example to step through the code. In the IDE, use the **\<Appl
 
 | Resource  |  Alias/object     |    Purpose     |
 | :------- | :------------    | :------------ |
-| Digital Pin | CYBSP_USER_LED | User LED to show output |
+| Digital pin | CYBSP_USER_LED | User LED to show output |
 
 The application blinks an LED by controlling the GPIO output.
 
@@ -186,19 +198,19 @@ The application blinks an LED by controlling the GPIO output.
 
 Resources  | Links
 -----------|----------------------------------
-Application notes  | [AN79953](https://www.cypress.com/AN79953) – Getting started with PSoC&trade; 4
+Application notes  | [AN79953](https://www.infineon.com/dgdl/Infineon-AN79953_Getting_Started_with_PSoC_4-ApplicationNotes-v21_00-EN.pdf?fileId=8ac78c8c7cdc391c017d07271fd64bc1) – Getting started with PSoC&trade; 4
 Code examples  | [Using ModusToolbox&trade; software](https://github.com/Infineon/Code-Examples-for-ModusToolbox-Software) on GitHub
-Device documentation | [PSoC&trade; 4 datasheets](https://www.cypress.com/search/all/PSOC%204%20datasheets?sort_by=search_api_relevance&f%5B0%5D=meta_type%3Atechnical_documents) <br>[PSoC&trade; 4 technical reference manuals](https://www.cypress.com/search/all/PSoC%204%20Technical%20Reference%20Manual?sort_by=search_api_relevance&f%5B0%5D=meta_type%3Atechnical_documents)
+Device documentation | Download datasheets, TRMs, and other documents from the [PSoC&trade; 4](https://www.infineon.com/cms/en/product/microcontroller/32-bit-psoc-arm-cortex-microcontroller/psoc-4-32-bit-arm-cortex-m0-mcu) product page
 Development kits | Select your kits from the [Evaluation Board Finder](https://www.infineon.com/cms/en/design-support/finder-selection-tools/product-finder/evaluation-board) page.
 Libraries on GitHub  | [mtb-pdl-cat2](https://github.com/Infineon/mtb-pdl-cat2) – PSoC&trade; 4 peripheral driver library (PDL) <br>  [mtb-hal-cat2](https://github.com/Infineon/mtb-hal-cat2) – Hardware abstraction layer (HAL) library
-Middleware on GitHub  | [capsense](https://github.com/Infineon/capsense) – CAPSENSE&trade; library and documents <br> [psoc4-middleware](https://github.com/Infineon/psoc4-middleware) – Links to all PSoC&trade; 4 middleware
-Tools | [Eclipse IDE for ModusToolbox&trade; software](https://www.cypress.com/modustoolbox) – ModusToolbox&trade; software is a collection of easy-to-use software and tools enabling rapid development with Infineon MCUs, covering applications from embedded sense and control to wireless and cloud-connected systems using AIROC&trade; Wi-Fi and Bluetooth® connectivity devices.
+Middleware on GitHub  | [capsense](https://github.com/Infineon/capsense) – CAPSENSE&trade; library and documents <br> 
+Tools | [Eclipse IDE for ModusToolbox&trade; software](https://www.infineon.com/modustoolbox) – ModusToolbox&trade; software is a collection of easy-to-use software and tools enabling rapid development with Infineon MCUs, covering applications from embedded sense and control to wireless and cloud-connected systems using AIROC&trade; Wi-Fi and Bluetooth® connectivity devices.
 
 <br>
 
 ## Other resources
 
-Infineon provides a wealth of data at www.infineon.com to help you select the right device, and quickly and effectively integrate it into your design.
+Infineon provides a wealth of data at [www.infineon.com](https://www.infineon.com) to help you select the right device, and quickly and effectively integrate it into your design.
 
 ## Document history
 
@@ -208,8 +220,9 @@ Document title: *CE235475* – *PSoC&trade; 4: Blinky*
  ------- | ---------------------
  1.0.0   | New code example
  1.0.1   | Minor readme update
+ 1.1.0   | Minor folder structure changes that doesn't break backward compatibility
 
-<br />
+<br>
 
 ---------------------------------------------------------
 
