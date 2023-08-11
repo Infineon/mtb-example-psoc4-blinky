@@ -5,7 +5,7 @@ This code example demonstrates how to toggle an LED periodically using PSoC™ 4
 [View this README on GitHub.](https://github.com/Infineon/mtb-example-psoc4-blinky)
 
 
-[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzU0NzUiLCJTcGVjIE51bWJlciI6IjAwMi0zNTQ3NSIsIkRvYyBUaXRsZSI6IlBTb0MmdHJhZGU7IDQ6IEJsaW5reSIsInJpZCI6Inlhc2h2aSIsIkRvYyB2ZXJzaW9uIjoiMi4wLjAiLCJEb2MgTGFuZ3VhZ2UiOiJFbmdsaXNoIiwiRG9jIERpdmlzaW9uIjoiTUNEIiwiRG9jIEJVIjoiSUNXIiwiRG9jIEZhbWlseSI6IlBTT0MifQ==)
+[Provide feedback on this code example.](https://cypress.co1.qualtrics.com/jfe/form/SV_1NTns53sK2yiljn?Q_EED=eyJVbmlxdWUgRG9jIElkIjoiQ0UyMzU0NzUiLCJTcGVjIE51bWJlciI6IjAwMi0zNTQ3NSIsIkRvYyBUaXRsZSI6IlBTb0MmdHJhZGU7IDQ6IEJsaW5reSIsInJpZCI6Inlhc2h2aSIsIkRvYyB2ZXJzaW9uIjoiMi4xLjAiLCJEb2MgTGFuZ3VhZ2UiOiJFbmdsaXNoIiwiRG9jIERpdmlzaW9uIjoiTUNEIiwiRG9jIEJVIjoiSUNXIiwiRG9jIEZhbWlseSI6IlBTT0MifQ==)
 
 ## Requirements
 
@@ -211,6 +211,7 @@ Document title: *CE235475* – *PSoC&trade; 4: Blinky*
  1.0.1   | Minor readme update
  1.1.0   | Minor folder structure changes that does not break backward compatibility
  2.0.0   | Major update to support ModusToolbox&trade; v3.1<br> This version is not backward compatible with ModusToolbox&trade; v3.0
+ 2.1.0   | Minor update in the Pin Configuration
 
 <br>
 

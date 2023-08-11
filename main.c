@@ -85,7 +85,7 @@ int main(void)
     for(;;)
     {
         /* Toggle the user LED state */
-        Cy_GPIO_Inv(CYBSP_USER_LED1_PORT, CYBSP_USER_LED1_PIN);
+        Cy_GPIO_Inv(CYBSP_USER_LED_PORT, CYBSP_USER_LED_PIN);
 
         /* Wait for 0.5 seconds */
         Cy_SysLib_Delay(LED_DELAY_MS);
